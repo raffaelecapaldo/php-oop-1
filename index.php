@@ -17,7 +17,7 @@ class Movie {
      * @param string $original_title The original title of the movie.
      * @param string $nationality The nationality of the movie.
      * @param float $vote The vote rating of the movie.
-     * @param string $genre The genre of the movie.
+     * @param array $genres An array with the genres of the movie.
      * @param string $image The image URL of the movie.
      */
 
