@@ -32,16 +32,23 @@ class Movie {
     }
 
     public function showImage(){
-        return "<img src='$this->image' alt='$this->title'>";
+        return "<img class='card-img-top' src='$this->image' alt='$this->title'>";
     
 
 }
     public function showGenres(){
+        $totalGenres = count($this->genres);
         $listgenres = "";
-        foreach ($this->genres as $genre) {
-            $listgenres .= $genre->name.','.' ';
+        foreach ($this->genres as $index => $genre) {
+            if ($index === $totalGenres - 1) {
+            $listgenres .= $genre->name.'.';
+            }
+            else {
+                $listgenres .= $genre->name.','.' ';
+            }
+            
         }
-        return "<p>Genere: $listgenres </p>";
+        return "<p>Genres: $listgenres </p>";
     }
 
 }
